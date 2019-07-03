@@ -30,7 +30,7 @@ Try your best to answer each question on your own before looking up the answer o
 
 
 #### 5. What do we call the #{} convention used below? What is it accomplishing?
-
+String interpolation. It lets you easily read the output by inputting variables directly inside a string.
 ```ruby
 x = 1022
 puts "I am printing a random number #{x}"
