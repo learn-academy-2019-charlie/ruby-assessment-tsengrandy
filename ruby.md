@@ -30,10 +30,18 @@ by refactoring.
 #### 4. Name three possible non-inheritance relationships between ruby objects? 
 
 //Your Answer
-
+has many
+belongs to
+has many of each other
 
 //Googled Answer
-
+Three important relationships in Ruby are known as ‘belongs to…’, ‘has many…’, and “has many of each other”. The ‘belongs to’ and ‘has many’ relationships are considered to be the inverse of one another.
+If one class belongs to another, it will have the name of the class that it belongs to listed under attr_accessor. Then set the writer method to equal an instance of the class it belongs to. 
+Typically, a film will have just one director and therefore belongs to that director.
+If a class has many of another, it will have an array of the second class in its initialize method. To add song instances to that array, use an instance method called “add_<element_name>”on the initial class
+(the one that has many of the other). For this example, we are looking at the relationship between directors and films. Typically, a director will have multiple films.
+This relationship is slightly more complicated to express in code, but draws on the previous two relationships. Both of the previous programatic language has to be built into both classes. For this example, 
+we are looking at the relationship between films and actors. Typically, actors have many films that they are in, and films have many actors in them.
 
 #### 5. What do we call the #{} convention used below? What is it accomplishing?
 String interpolation. It lets you easily read the output by inputting variables directly inside a string.
@@ -67,8 +75,12 @@ Needs experience to do it well
 #### 7. What is an instance variable in Ruby? How is it different from a normal, local variable?
 
 //Your Answer
+An instance variable in Ruby is a variable that is linked to that specific object's scope. A local variable can be accessed by all objects, but an instance variable can only be accessed by that specific 
+object.
 
 //Googled Answer
+An instance variable has a name beginning with @, and its scope is confined to whatever object self refers to. Two different objects, even if they belong to the same class, are allowed to have different 
+values for their instance variables. From outside the object, instance variables cannot be altered or even observed (i.e., ruby's instance variables are never public)
 
 #### 8. Ruby has a great community and tons of free resources to help you learn. Here is the long list of great resources: https://www.ruby-lang.org/en/documentation/. Below are a few popular ones:
 - Interactive Ruby tutorial (http://tryruby.org/levels/1/challenges/0)
@@ -77,3 +89,13 @@ Needs experience to do it well
 
 
 Choose one of these resources and go through the material (not for hours, only looking for around 10min of your time) then come back here and list a few new things you learned about Ruby.
+
+Commas are not allowed in numbers, but underscores are. So if you feel the need to mark your thousands so the numbers are more readable, use an underscore.
+population = 12_000_000_000
+
+Both exclamation marks and question marks may be used in method names.
+
+Think of the at symbol as meaning attribute.
+
+A range is two values surrounded by parentheses and separated by an ellipsis (in the form of two or three dots).
+Normally, only two dots are used. If a third dot is used, the last value in the range is excluded.
